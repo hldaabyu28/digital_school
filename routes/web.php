@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Redirect root to login
 Route::get('/', function () {
-    return redirect('/login');
+    return view('welcome');
 });
+
 
 // Guest routes (only accessible when not authenticated)
 Route::middleware('guest')->group(function () {
